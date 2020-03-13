@@ -1,0 +1,12 @@
+version: '2'
+services:
+  counter:
+    container_name: classic_counter
+    build: .
+    ports: 
+      - 80:80
+    volumes:
+      - ./:/root/workspace
+    environment:
+      - 'TZ=Asia/Tokyo'
+    command: apachectl -DFOREGROUND

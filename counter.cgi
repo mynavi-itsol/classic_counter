@@ -4,7 +4,7 @@ from fcntl import lockf, LOCK_EX
 
 print("Content-type: image/svg+xml\n")
 
-DATA_FILENAME = "../data/counter.dat"
+DATA_FILENAME = "../../data/counter.dat"
 
 with open(DATA_FILENAME, "r+") as f:
     lockf(f, LOCK_EX)
